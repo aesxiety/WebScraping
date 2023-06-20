@@ -14,8 +14,6 @@ driver = webdriver.Chrome()
 list_posisi,list_company,list_location =[],[],[]
 list_date,list_url,list_deskripsi=[],[],[]
 
-start_values = [0,10,20,30,40,50,60,70,80,90,100,110,120,130,]
-
 # Nilai awal dan akhir
 start_awal = 0
 start_akhir = 400
@@ -33,11 +31,6 @@ for start in start_values:
         perintah = "window.scrollTo((0),"+str(akhir)+")"
         driver.execute_script(perintah)
         time.sleep(2.5)
-
-    # time.sleep(5)
-    # driver.save_screenshot("home.png")
-    # content = driver.page_source
-    # driver.quit()
 
     # lihattampilan
     content = driver.page_source
